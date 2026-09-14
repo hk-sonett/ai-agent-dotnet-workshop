@@ -28,7 +28,10 @@ public static class ServiceCollectionExtensions
                 .AsIChatClient()
                 .AsBuilder()
                 .ConfigureOptions(o =>
-                    o.Reasoning = new ReasoningOptions { Effort = ReasoningEffort.None })
+                {
+                    o.Reasoning = new ReasoningOptions { Effort = ReasoningEffort.None };
+                })
+                .UseFunctionInvocation()
                 .Build());
     }
 }
