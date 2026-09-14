@@ -31,7 +31,6 @@ public static class ServiceCollectionExtensions
                 {
                     o.Reasoning = new ReasoningOptions { Effort = ReasoningEffort.None };
                 })
-                .UseFunctionInvocation()
                 .Build());
     }
 
